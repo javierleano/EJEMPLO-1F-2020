@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1599770748 source:c:\users\junio\desktop\ejemplo github\ejemplo-1f-2020\tp_laboratorio_1\tp_laboratorio_1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdlib.h>
+	<ctype.h>
+	"funciones.h"
+
+1599771414 c:\users\junio\desktop\ejemplo github\ejemplo-1f-2020\tp_laboratorio_1\tp_laboratorio_1\funciones.h
+
+1599770782 source:c:\users\junio\desktop\ejemplo github\ejemplo-1f-2020\tp_laboratorio_1\funciones.c
+	"funciones.h"
+
+1599771414 c:\users\junio\desktop\ejemplo github\ejemplo-1f-2020\tp_laboratorio_1\funciones.h
+
+1599770748 source:c:\users\junio\desktop\ejemplo github\ejemplo-1f-2020\tp_laboratorio_1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdlib.h>
+	<ctype.h>
+	"funciones.h"
+
