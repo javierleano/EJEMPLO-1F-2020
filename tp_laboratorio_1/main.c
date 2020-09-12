@@ -1,9 +1,12 @@
+/*Javier Leaño 1ro F dni 95871422*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
 #include "funciones.h"
+#include <conio.h>
 
 int main()
 {
@@ -18,43 +21,51 @@ int main()
     double factorial2;
     primerNumero = 0;
     segundoNumero = 0;
-    int opciones;
+    char opciones;
     char primerNumeroString[10];
     char segundoNumeroString[10];
 
 
     do
     {
-        printf( "\nMENU CALCULADORA" );
+        printf( "\n********* MENU CALCULADORA ************" );
         printf("\n1- Ingresar 1er operando (A = %.2f)\n",primerNumero);
         printf("2- Ingresar 2do operando (B = %.2f)\n",segundoNumero);
         printf("3- Calcular todas las operaciones\n");
-        printf("  A) Suma\n");
-        printf("  B) Resta\n");
-        printf("  C) Division\n");
-        printf("  D) multiplicacion\n");
-        printf("  F) factorial");
-        printf("\n4. Informar resultados");
+        printf("    A) Suma\n");
+        printf("    B) Resta\n");
+        printf("    C) Division\n");
+        printf("    D) multiplicacion\n");
+        printf("    F) factorial");
+        printf("\n4. Informar resultados\n");
+        printf("    A) El resultado de A+B es:\n");
+        printf("    B) El resultado de A-B es: \n");
+        printf("    C) El resultado de A/B es:\n");
+        printf("    D) El resultado de A*B es: \n");
+        printf("    F) El factorial de A es:  y El factorial de B es:");
         printf("\n5. Salir\n");
         printf("Opcion: ");
-        scanf("%d",&opciones);
+        fflush(stdin);
+        scanf("%c",&opciones);
+        fflush(stdin);
+
 
 
         switch(opciones)
         {
-        case 1:
+        case '1':
             printf("\nIngrese el 1er operando:");
             scanf("%s", primerNumeroString);
             numeroValido(primerNumeroString);
             primerNumero = atof(primerNumeroString);
             break;
-        case 2:
+        case '2':
             printf("\nIngrese el 2do operando: ");
             scanf("%s", segundoNumeroString);
             numeroValido(segundoNumeroString);
             segundoNumero = atof(segundoNumeroString);
             break;
-        case 3 :
+        case '3':
             suma = sumar(primerNumero,segundoNumero);
             resta = restar(primerNumero,segundoNumero);
             multiplicar = multiplicacion(primerNumero,segundoNumero);
@@ -62,7 +73,7 @@ int main()
             factorial1 = factorial((int)primerNumero);
             factorial2 = factorial((int)segundoNumero);
             break;
-        case 4:
+        case '4':
             printf("\nEl resultado de A+B es: %.2f\n", suma);
             printf("El resultado de A-B es: %.2f\n", resta);
             if(segundoNumero == 0)
@@ -92,9 +103,11 @@ int main()
                 printf(" y el factorial de B es: %.0lf", factorial2);
             }
             break;
-
-        case 5 :
+        case '5' :
             return 0;
+            break;
+        default:
+            printf("Ingresar una opcion valida");
         }
     }
     while(1 == 1);

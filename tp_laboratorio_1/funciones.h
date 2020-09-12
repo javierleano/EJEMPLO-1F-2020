@@ -4,7 +4,6 @@
 /**< Prototipo de la función de suma */
 float sumar(float primerNumero, float segundoNumero);
 
-
 /**< Prototipo de la función de resta */
 float restar(float primerNumero, float segundoNumero);
 
