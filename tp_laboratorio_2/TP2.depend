@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1601581649 source:c:\users\junio\desktop\ejemplo github\ejemplo-1f-2020\tp2\array_employee.c
+	"array_employee.h"
+	<stddef.h>
+	<string.h>
+	<stdio.h>
+
+1601581844 source:c:\users\junio\desktop\ejemplo github\ejemplo-1f-2020\tp2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"array_employee.h"
+	<string.h>
+
+1601580921 c:\users\junio\desktop\ejemplo github\ejemplo-1f-2020\tp2\array_employee.h
+
+1601675278 source:c:\users\junio\desktop\ejemplo github\ejemplo-1f-2020\tp_laboratorio_2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"array_employee.h"
+
+1601676766 c:\users\junio\desktop\ejemplo github\ejemplo-1f-2020\tp_laboratorio_2\array_employee.h
+
+1601676763 source:c:\users\junio\desktop\ejemplo github\ejemplo-1f-2020\tp_laboratorio_2\array_employee.c
+	<stddef.h>
+	<string.h>
+	<stdio.h>
+	<ctype.h>
+	<stdalign.h>
+	"array_employee.h"
+

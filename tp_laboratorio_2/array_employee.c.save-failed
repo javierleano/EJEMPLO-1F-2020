@@ -1,0 +1,141 @@
+#include "array_employee.h"
+#include <stddef.h>
+#include <string.h>
+#include <stdio.h>
+
+int initEmployees(Employee* list, int len)
+{
+    if(list == NULL || len > LEN)
+    {
+        return -1;
+    }
+
+    for(int i=0; i<len; i++)
+    {
+        list[i].isEmpty=1;
+    }
+    return 0;
+}
+
+int addEmployee(Employee* list, int len, int id, char name[],char
+                lastName[],float salary,int sector)
+{
+
+    if(list == NULL || len > LEN)
+    {
+        return -1;
+    }
+
+    for(int i=0; i<len; i++)
+    {
+        if(list[i].isEmpty == 1)
+        {
+            list[i].id=id;
+            strcpy(list[i].name,name);
+            strcpy(list[i].lastName,lastName);
+            list[i].salary=salary;
+            list[i].sector=sector;
+            list[i].isEmpty = 0;
+            return 0;
+        }
+    }
+
+    return -1;
+
+}
+
+int findEmployeeById(Employee* list, int len,int id)
+{
+    if(list == NULL || len > LEN)
+    {
+        return -1;
+    }
+
+    for(int i=0; i<len; i++)
+    {
+
+        if(list[i].id==id && list[i].isEmpty == 0)
+        {
+            return i;
+        }
+
+
+    }
+
+    return -1;
+
+
+
+}
+
+int removeEmployee(Employee* list, int len, int id)
+{
+    if(list == NULL || len > LEN)
+    {
+        return -1;
+    }
+
+    for(int i=0; i<len; i++)
+    {
+
+        if(list[i].id==id && list[i].isEmpty == 0 )
+        {
+            list[i].isEmpty=1;
+            return 0;
+        }
+
+    }
+    return -1;
+
+}
+
+
+int sortEmployees(Employee* list, int len, int order)
+{
+    int i;
+    int j;
+    Employee aux_elem;
+    for (int i = 0; i < len- 1; i++)
+    {
+        for (j = 1; j < len; j++)
+        {
+            if (cmpEmployees(list[j],list[j-1],order)>0) //es verdadero si array de j-1 es mayor que array j
+            {
+                // si el elemento anterior es mayor, hacemos el cambio
+                aux_elem = list[j];
+                list[j] = list[j-1];
+                list[j-1] = aux_elem;
+
+
+            }
+        }
+    }
+
+    return 0;
+}
+
+int cmpEmployees (Employee a, Employee b, int order)
+{
+     if(b.isEmpty ==1){
+        return 1;
+     }
+
+     // Devuelve Mayor que Cero si B es Mayor
+    int cmp = strcmp(b.lastName, a.lastName);
+
+
+    return cmp;
+}
+
+int printEmployees(Employee* list, int length)
+{
+
+for (int i = 0; i < length; i++)
+{
+
+    printf("apellido: %s, nombre: %s, sector : %d\n",list[i].lastName,list[i].name,list[i].sector);
+
+}
+
+
+}
